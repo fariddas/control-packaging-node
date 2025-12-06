@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard Control Packaging</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="dashboard">
+  <div class="app-shell">
+    <header class="app-header">
+      <div class="app-header-left">
+        <div class="logo-badge">C</div>
+        <div>
+          <div class="app-title-main">Control Packaging</div>
+          <div class="app-title-sub">Dashboard • Node.js Demo</div>
+        </div>
+      </div>
+      <div class="app-header-right">
+        <span class="badge-role" data-user-label>Admin</span>
+        <span class="app-title-sub" data-role-badge>Login sebagai Admin</span>
+        <button class="btn-ghost" data-logout>Logout</button>
+      </div>
+    </header>
+
+    <main class="app-main">
+      <div class="page-title">Dashboard Control Packaging</div>
+      <div class="page-subtitle">Ringkasan total scan hari ini dan bulan ini.</div>
+
+      <div class="card-grid-3">
+        <div class="card">
+          <div class="card-title">Total Scan Hari Ini</div>
+          <div class="metric-value" id="total-today">0</div>
+        </div>
+        <div class="card">
+          <div class="card-title">Total Scan Bulan Ini</div>
+          <div class="metric-value" id="total-month">0</div>
+        </div>
+        <div class="card">
+          <div class="card-title">Menu</div>
+          <div class="menu-column">
+            <button class="btn-menu" onclick="window.location.href='/wh.html'">Warehouse (WH)</button>
+            <button class="btn-menu" onclick="window.location.href='/supplier.html'">Supplier</button>
+            <button class="btn-menu" onclick="window.location.href='/repair.html'">Repair</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>

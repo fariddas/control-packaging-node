@@ -1,0 +1,355 @@
+
+:root {
+  --bg: #f5f7ff;
+  --card-bg: #ffffff;
+  --primary: #1d4ed8;
+  --primary-soft: #2563eb;
+  --text-main: #111827;
+  --text-muted: #6b7280;
+  --shadow-soft: 0 20px 40px rgba(15, 23, 42, 0.12);
+  --radius-card: 20px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top, #e0edff 0, #f5f7ff 55%, #f9fafb 100%);
+  color: var(--text-main);
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  background: linear-gradient(90deg, #1e3a8a, #2563eb);
+  color: #e5e7eb;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.35);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.app-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-badge {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 20%, #93c5fd, #1d4ed8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.8);
+}
+
+.app-title-main {
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.app-title-sub {
+  font-size: 11px;
+  opacity: 0.85;
+}
+
+.app-header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 13px;
+}
+
+.badge-role {
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.2);
+  border: 1px solid rgba(191, 219, 254, 0.6);
+}
+
+.btn-ghost {
+  padding: 6px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(248, 250, 252, 0.8);
+  background: rgba(15, 23, 42, 0.15);
+  color: #f9fafb;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-ghost:hover {
+  background: rgba(248, 250, 252, 0.18);
+  transform: translateY(-1px);
+}
+
+/* Layout */
+.app-main {
+  flex: 1;
+  padding: 32px 32px 40px;
+  max-width: 1180px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.page-subtitle {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+/* Cards */
+.card-grid-3 {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 24px;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius-card);
+  padding: 22px 24px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid #e5e7eb;
+}
+
+.card-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--text-muted);
+}
+
+.metric-value {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* Menu */
+.menu-column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn-menu {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
+  transition: all 0.14s ease;
+}
+
+.btn-menu:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.55);
+}
+
+.btn-menu:active {
+  transform: translateY(0);
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.45);
+}
+
+/* Forms */
+.form-grid-2 {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr);
+  gap: 24px;
+}
+
+.form-group {
+  margin-bottom: 14px;
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: var(--text-muted);
+}
+
+.input,
+.select,
+.textarea {
+  width: 100%;
+  padding: 9px 11px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.12s ease, box-shadow 0.12s ease;
+  font-family: inherit;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.45);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 50px;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 26px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.45);
+  transition: all 0.15s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.58);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 9px 18px rgba(37, 99, 235, 0.5);
+}
+
+.status-text {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #059669;
+}
+
+/* History table */
+.table-wrapper {
+  margin-top: 6px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+thead {
+  background: #f3f4f6;
+}
+
+th,
+td {
+  padding: 8px 10px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+  white-space: nowrap;
+}
+
+th {
+  font-weight: 600;
+  color: #4b5563;
+}
+
+tbody tr:nth-child(even) {
+  background: #f9fafb;
+}
+
+/* Login */
+.login-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top, #e0edff 0, #f5f7ff 55%, #f9fafb 100%);
+}
+
+.login-card {
+  width: 380px;
+  max-width: 92vw;
+  background: var(--card-bg);
+  border-radius: 22px;
+  padding: 26px 26px 24px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid #e5e7eb;
+}
+
+.login-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.login-sub {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.alert {
+  margin-top: 10px;
+  font-size: 12px;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+
+.alert-error {
+  background: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+/* Utility */
+.text-right {
+  text-align: right;
+}
+
+@media (max-width: 960px) {
+  .app-main {
+    padding: 20px 16px 28px;
+  }
+  .card-grid-3,
+  .form-grid-2 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

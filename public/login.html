@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Control Packaging</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="login">
+  <div class="login-wrapper">
+    <div class="login-card">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+        <div class="logo-badge">C</div>
+        <div>
+          <div class="app-title-main">Control Packaging</div>
+          <div class="app-title-sub">Node.js Demo • Login</div>
+        </div>
+      </div>
+      <div class="login-title">Masuk</div>
+      <div class="login-sub">Login dengan akun demo: <b>Admin / WH1 / SUPPLIER1 / REPAIR1</b> dan password <b>123</b>.</div>
+      <form id="login-form">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input class="input" type="text" id="username" name="username" placeholder="Admin">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input class="input" type="password" id="password" name="password" placeholder="•••">
+        </div>
+        <button class="btn-primary" type="submit" style="width:100%;margin-top:4px;">Login</button>
+        <div id="login-alert" class="alert" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>
